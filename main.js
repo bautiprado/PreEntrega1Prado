@@ -1,4 +1,3 @@
-//1
 function registro() {
     alert("Bienvenido a Seven Only Fútbol, te ofrecemos camisetas únicas 🙌🏻")
     alert("¡Empecemos!")
