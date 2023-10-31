@@ -20,8 +20,12 @@ let confirmacion = true
 
 do {
     let camiseta = (prompt("Ingrese el nombre de la camiseta que desea"))
-    let precioDescuento = parseFloat(prompt("Ingrese su precio inicial para calcular el descuento"))
+    let precioDescuento
 
+    while (true) {
+        precioDescuento = parseFloat(prompt("Ingrese su precio inicial para calcular el descuento"))
+
+    if (!isNaN(precioDescuento) && precioDescuento > 0) {
     let oferta = calcularOferta(precioDescuento)
 
     let respuesta = prompt("¿Desea ingresar otro precio para calcular?")
@@ -29,5 +33,9 @@ do {
     if (respuesta.toLowerCase() !== 'si') {
         confirmacion = false
     }
-
+    break;
+    } else {
+    alert("Por favor, ingrese un número válido")
+    }
+    }
 } while (confirmacion)
